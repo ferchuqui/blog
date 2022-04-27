@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
 
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  get "bienvenida", to: "home#index"
+
     # Defines the root path route ("/")
     # root "articles#index"
     root to: "articles#index"
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
   get "articles/:id", to: "articles#show"
   get "articles/:id/edit", to: "articles#edit"
 
-  patch "/articles/:id", to: "articles#update", as: :article
+  patch "articles/:id", to: "articles#update", as: :article
   post "articles", to:"articles#create"
-  delete "/articles/:id", to:"articles#destroy"
+  delete "articles/:id", to:"articles#destroy"
 end

@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
   def edit
     @article = Article.find(params[:id])
 
+
   end
 
   def update
@@ -25,7 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy;
-  @article =Article.find(params[:id])
+  @article = Article.find(params[:id])
   @article.destroy
   redirect_to root_path
   end
